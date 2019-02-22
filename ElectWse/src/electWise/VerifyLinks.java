@@ -1,49 +1,17 @@
 package electWise;
 
-import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.List;
-
+import java.util.List; 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-//import org.openqa.selenium.remote.BrowserType;
-//import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.testng.Assert;
 import org.testng.annotations.Test;
-
-//import com.sun.org.omg.CORBA.ExceptionDescription;
-
-//import jdk.nashorn.internal.ir.CatchNode;
-
-//import com.sun.xml.internal.ws.policy.AssertionSet;
-
-public class EWBase {
-	
-	
-	@Test
-	public void Ew_AboutUs() throws IOException, Exception
-	
-	{
-	//	System.setProperty("webdriver.ie.driver", "D:\\selenium\\IEDriverServer.exe");
-		System.setProperty("webdriver.chrome.driver", "D:\\selenium\\chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
-		driver.get("https://www.electwise.in/telangana");
-		driver.manage().window().maximize();
-		System.out.println(driver.getTitle());
-		WebElement element = driver.findElement(By.xpath("//a[contains(text(),'About Us')]"));
-		element.click();
-		WebElement element1 = driver.findElement(By.xpath("//h3[contains(text(),'About Us')]"));
-		String checks = element1.getText();
-		System.out.println(checks);
-		Assert.assertEquals(checks, "About Us");
-		Thread.sleep(2000);
-		driver.close();		
-
-	}
-	
+//import org.openqa.selenium.firefox.FirefoxDriver;
+ 
+public class VerifyLinks {
+ 
 	@Test
 	public void brokenLinks() throws Exception 
 	{
@@ -157,7 +125,7 @@ public class EWBase {
 			
 		}*/
 		
-		driver.findElement(By.xpath("(//a[contains(text(),'Constituencies')])[2]")).click();
+		/*driver.findElement(By.xpath("(//a[contains(text(),'Constituencies')])[2]")).click();
 		List<WebElement> Constituencieslinks=driver.findElements(By.tagName("a"));
 		List<WebElement> ConstituenciesimageLinks = driver.findElements(By.tagName("img"));
 		
@@ -177,12 +145,12 @@ public class EWBase {
 			Constituencieslinks=driver.findElements(By.tagName("a"));
 			ConstituenciesimageLinks = driver.findElements(By.tagName("img"));
 			
-			/*if(driver.findElement(By.xpath("//a[@class='page-link' and @href='?page=2']")).isEnabled()) {
+			if(driver.findElement(By.xpath("//a[@class='page-link' and @href='?page=2']")).isEnabled()) {
 				verifyLinkActive(newsurl);
 				
-			}*/
+			}
 			
-		}
+		}*/
 				
 		driver.close();
 		
@@ -212,8 +180,9 @@ public class EWBase {
         } catch (Exception e) {
            
         }
-    }
-
+    } 
+	
+	
+	 
+ 
 }
-
-

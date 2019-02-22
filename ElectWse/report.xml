@@ -4,7 +4,7 @@
   <test name="electwise" >
     <classes>
        <class name="electWise.EWBase" />
-       <!-- <class name="electWise.VerifyLinks" /> -->
+       <class name="electWise.VerifyLinks" />
     </classes>
   </test>
 </suite>
